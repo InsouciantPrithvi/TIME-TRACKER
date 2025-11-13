@@ -505,17 +505,17 @@ export default function App() {
     new Date().toLocaleString("en-US", { month: "short", day: "numeric" });
 
   // For LIVE use, uncomment the line below:
-  // const todayString = getTodayString();
+  const todayString = getTodayString();
 
   // For TESTING (matches the user's current date of Nov 13)
-  const todayString = "Nov 13"; // Change to "Nov 15" to test weekend view
+  // const todayString = "Nov 13"; // Change to "Nov 15" to test weekend view
 
   const todayTask = studyPlan.find((day) => day.date === todayString);
   // --- End of Today's Task Logic ---
 
   return (
-    // Added min-h-screen to match original style
-    <div className="bg-gray-100 p-4 sm:p-8 min-h-screen">
+    // Added min-h-screen and font-['Inter'] to match original style
+    <div className="bg-gray-100 p-4 sm:p-8 min-h-screen font-['Inter']">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <header className="mb-8">
